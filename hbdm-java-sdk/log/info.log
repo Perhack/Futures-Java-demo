@@ -1,0 +1,26 @@
+2020-01-03 18:00:46.309 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onError:98] - onError:
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
+	at java.lang.Thread.run(Unknown Source)
+2020-01-03 18:00:46.394 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false
+2020-01-03 18:01:09.155 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045674485,"tick":{"id":36222773001,"ts":1578045674307,"data":[{"amount":92,"ts":1578045674307,"id":362227730010000,"price":7345.5,"direction":"sell"}]}}
+2020-01-03 18:01:09.181 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045674485,当前的时间戳为：1578045669157,时间间隔为：-5328毫秒
+2020-01-03 18:01:09.182 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_NW.trade.detail","ts":1578045674492,"tick":{"id":36222772977,"ts":1578045674307,"data":[{"amount":10,"ts":1578045674307,"id":362227729770000,"price":7353.35,"direction":"sell"}]}}
+2020-01-03 18:01:09.183 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045674492,当前的时间戳为：1578045669183,时间间隔为：-5309毫秒
+2020-01-03 18:01:10.328 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045676118,"tick":{"id":36222777902,"ts":1578045675904,"data":[{"amount":144,"ts":1578045675904,"id":362227779020000,"price":7344.9,"direction":"buy"}]}}
+2020-01-03 18:01:10.329 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045676118,当前的时间戳为：1578045670329,时间间隔为：-5789毫秒
+2020-01-03 18:01:10.805 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045676626,"tick":{"id":36222779843,"ts":1578045676334,"data":[{"amount":56,"ts":1578045676334,"id":362227798430000,"price":7344.72,"direction":"sell"}]}}
+2020-01-03 18:01:10.806 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045676626,当前的时间戳为：1578045670806,时间间隔为：-5820毫秒
+2020-01-03 18:01:11.021 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045676843,"tick":{"id":36222780667,"ts":1578045676624,"data":[{"amount":14,"ts":1578045676624,"id":362227806670000,"price":7344.72,"direction":"sell"},{"amount":10,"ts":1578045676624,"id":362227806670001,"price":7344.72,"direction":"sell"},{"amount":154,"ts":1578045676624,"id":362227806670002,"price":7344.71,"direction":"sell"}]}}
+2020-01-03 18:01:11.025 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045676843,当前的时间戳为：1578045671025,时间间隔为：-5818毫秒
+2020-01-03 18:01:11.425 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045677244,"tick":{"id":36222782325,"ts":1578045677032,"data":[{"amount":24,"ts":1578045677032,"id":362227823250000,"price":7344.71,"direction":"sell"}]}}
+2020-01-03 18:01:11.426 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045677244,当前的时间戳为：1578045671426,时间间隔为：-5818毫秒
+2020-01-03 18:01:11.709 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045677512,"tick":{"id":36222783301,"ts":1578045677235,"data":[{"amount":12,"ts":1578045677235,"id":362227833010000,"price":7343.79,"direction":"sell"},{"amount":2,"ts":1578045677235,"id":362227833010001,"price":7343.79,"direction":"sell"}]}}
+2020-01-03 18:01:11.710 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045677512,当前的时间戳为：1578045671709,时间间隔为：-5803毫秒
