@@ -10,3 +10,15 @@ java.net.ConnectException: Connection timed out: connect
 	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
 	at java.lang.Thread.run(Unknown Source)
 2020-01-03 18:00:46.394 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false
+2020-01-07 17:54:08.423 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onError:98] - onError:
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-07 17:54:08.438 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false

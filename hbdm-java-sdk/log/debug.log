@@ -25,3 +25,24 @@ java.net.ConnectException: Connection timed out: connect
 2020-01-03 18:01:11.426 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045677244,当前的时间戳为：1578045671426,时间间隔为：-5818毫秒
 2020-01-03 18:01:11.709 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578045677512,"tick":{"id":36222783301,"ts":1578045677235,"data":[{"amount":12,"ts":1578045677235,"id":362227833010000,"price":7343.79,"direction":"sell"},{"amount":2,"ts":1578045677235,"id":362227833010001,"price":7343.79,"direction":"sell"}]}}
 2020-01-03 18:01:11.710 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578045677512,当前的时间戳为：1578045671709,时间间隔为：-5803毫秒
+2020-01-07 17:54:08.423 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onError:98] - onError:
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
+	at java.lang.Thread.run(Thread.java:748)
+2020-01-07 17:54:08.438 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false
+2020-01-07 17:54:25.888 [DEBUG] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onOpen:57] - onOpen Success
+2020-01-07 17:54:26.114 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578390859810,"tick":{"id":37050791375,"ts":1578390859577,"data":[{"amount":6,"ts":1578390859577,"id":370507913750000,"price":7874.21,"direction":"buy"}]}}
+2020-01-07 17:54:26.144 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578390859810,当前的时间戳为：1578390866119,时间间隔为：6309毫秒
+2020-01-07 17:54:26.145 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_NW.trade.detail","ts":1578390865085,"tick":{"id":37050808497,"ts":1578390864982,"data":[{"amount":12,"ts":1578390864982,"id":370508084970000,"price":7888.91,"direction":"sell"},{"amount":32,"ts":1578390864982,"id":370508084970001,"price":7888.91,"direction":"sell"}]}}
+2020-01-07 17:54:26.146 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578390865085,当前的时间戳为：1578390866145,时间间隔为：1060毫秒
+2020-01-07 17:54:26.986 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578390874094,"tick":{"id":37050830055,"ts":1578390873935,"data":[{"amount":10,"ts":1578390873935,"id":370508300550000,"price":7875,"direction":"buy"}]}}
+2020-01-07 17:54:26.988 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578390874094,当前的时间戳为：1578390866988,时间间隔为：-7106毫秒
+2020-01-07 17:54:27.931 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:89] - 订阅TradeDetail数据用户收到的数据===============:{"ch":"market.BTC_CW.trade.detail","ts":1578390875033,"tick":{"id":37050832867,"ts":1578390874915,"data":[{"amount":110,"ts":1578390874915,"id":370508328670000,"price":7875,"direction":"buy"},{"amount":36,"ts":1578390874915,"id":370508328670001,"price":7875,"direction":"buy"}]}}
+2020-01-07 17:54:27.932 [INFO] [pool-2-thread-1] [com.perhack.waterfall.Waterfall.lambda$3:92] - detailEvent的ts为：1578390875033,当前的时间戳为：1578390867931,时间间隔为：-7102毫秒

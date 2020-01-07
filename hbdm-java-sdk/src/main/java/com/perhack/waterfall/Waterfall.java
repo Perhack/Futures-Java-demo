@@ -21,8 +21,8 @@ public class Waterfall {
 	
 	private MarketAPIServiceImpl mService = new MarketAPIServiceImpl();
 	
-//    private String URL = "wss://www.btcgateway.pro/ws";//合约站行情请求以及订阅地址
-    private String URL = "wss://www.hbdm.com/ws";//合约站行情请求以及订阅地址
+    private String URL = "wss://www.btcgateway.pro/ws";//合约站行情请求以及订阅地址
+//    private String URL = "wss://www.hbdm.com/ws";//合约站行情请求以及订阅地址
 
     
     WssMarketHandle wssMarketHandle = new WssMarketHandle(URL);
