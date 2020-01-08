@@ -1,6 +1,7 @@
 package com.huobi.perhack.waterfall;
 
 import java.net.URISyntaxException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,14 +12,17 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import com.huobi.api.response.market.MarketHistoryKlineResponse;
 import com.huobi.api.service.market.MarketAPIServiceImpl;
+import com.huobi.perhack.db.HuobiSqliteHelper;
 import com.huobi.perhack.source.HuobiSourceDataExtractor;
 import com.huobi.wss.event.MarketDepthSubResponse;
 import com.huobi.wss.event.MarketDetailSubResponse;
 import com.huobi.wss.event.MarketKLineSubResponse;
 import com.huobi.wss.handle.WssMarketHandle;
 import com.perhack.quant.Kline;
+import com.perhack.util.SqliteHelper;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.db.Db;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
@@ -116,18 +120,20 @@ public class Waterfall {
 //        channels.add("market.BTC_CW.kline.1mon");
 
         wssMarketHandle.sub(channels, response -> {
-        	logger.info(response);
         	Kline kline = HuobiSourceDataExtractor.getKLineData(response);
         	
-//        	long objj = JSONUtil.parseObj(response).getLong("ts");
-//        	logger.info(DateUtil.date(objj).toString());
-//    		logger.info(DateUtil.date(kline.getTs()*1000).toString());
-    		
-    		logger.info(kline.toString());
+        	
+        	HuobiSqliteHelper mHuobiSqliteHelper = new HuobiSqliteHelper();
+//        	mHuobiSqliteHelper.create1minklineTable();
+        	mHuobiSqliteHelper.insertInto1minkline(kline);;
+        	
+
         });
 		
 	}
     
+	
+	
 	public static void main(String []args) throws URISyntaxException{
 		Waterfall mWaterfall = new Waterfall();
 		mWaterfall.run();

@@ -26,6 +26,12 @@ public class HuobiSourceDataExtractor {
 		kline.setAmount(tick.getDouble("amount"));	//成交量(币), 即 sum(每一笔成交量(张)*单张合约面值/该笔成交价)
 		kline.setVol(tick.getDouble("vol"));	//成交量张数
 		kline.setCount(tick.getDouble("count"));	//成交笔数
+		
+		
+//    	logger.info(DateUtil.date(respTs).toString());
+//		logger.info(DateUtil.date(kline.getTs()*1000).toString());
+//		logger.info(kline.toString());
+
 		return kline;
 		
 	}
