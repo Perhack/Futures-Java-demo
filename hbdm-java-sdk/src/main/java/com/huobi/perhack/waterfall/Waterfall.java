@@ -1,38 +1,40 @@
-package com.huobi.future.wss;
+package com.huobi.perhack.waterfall;
+
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
+import com.huobi.api.response.market.MarketHistoryKlineResponse;
+import com.huobi.api.service.market.MarketAPIServiceImpl;
+import com.huobi.perhack.source.HuobiSourceDataExtractor;
 import com.huobi.wss.event.MarketDepthSubResponse;
 import com.huobi.wss.event.MarketDetailSubResponse;
 import com.huobi.wss.event.MarketKLineSubResponse;
 import com.huobi.wss.handle.WssMarketHandle;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.perhack.quant.Kline;
 
-import java.net.URISyntaxException;
-import java.util.List;
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.json.JSONArray;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
 
-public class WssMarketSubTest {
+public class Waterfall {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
-
+	
+	private MarketAPIServiceImpl mService = new MarketAPIServiceImpl();
+	
     private String URL = "wss://www.btcgateway.pro/ws";//合约站行情请求以及订阅地址
+//    private String URL = "wss://www.hbdm.com/ws";//合约站行情请求以及订阅地址
+
+    
     WssMarketHandle wssMarketHandle = new WssMarketHandle(URL);
-
-
-    /**
-     * 订阅 KLine 数据
-     * market.$symbol.kline.$period
-     * $symbol 如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约
-     * $period 如 1min, 5min, 15min, 30min, 1hour,4hour,1day, 1mon
-     * <p>
-     * 注：一个webSocket 可以一次订阅多个
-     *
-     * @throws URISyntaxException
-     * @throws InterruptedException
-     */
-    @Test
+	
     public void test1() throws URISyntaxException, InterruptedException {
         List<String> channels = Lists.newArrayList();
         channels.add("market.BTC_CW.kline.1min");
@@ -57,20 +59,8 @@ public class WssMarketSubTest {
 
 
     }
-
-
-    /**
-     * 订阅 Market Depth 数据
-     * market.$symbol.depth.$type
-     * $symbol 如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约.
-     * $type  (150档数据) step0, step1, step2, step3, step4, step5（合并深度1-5）,step0时，不合并深度;(20档数据) step6, step7, step8, step9, step10, step11（合并深度7-11）；step6时，不合并深度
-     * <p>
-     * 注：一个webSocket 可以一次订阅多个
-     *
-     * @throws URISyntaxException
-     * @throws InterruptedException
-     */
-    @Test
+	
+    
     public void test2() throws URISyntaxException, InterruptedException {
         List<String> channels = Lists.newArrayList();
         //channels.add("market.BTC_CW.depth.step0");
@@ -85,19 +75,7 @@ public class WssMarketSubTest {
         Thread.sleep(Integer.MAX_VALUE);
 
     }
-
-
-    /**
-     * 订阅 Market detail 数据
-     * market.$symbol.detail
-     * $symbol 如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约
-     * <p>
-     * 注：一个webSocket 可以一次订阅多个
-     *
-     * @throws URISyntaxException
-     * @throws InterruptedException
-     */
-    @Test
+    
     public void test3() throws URISyntaxException, InterruptedException {
         List<String> channels = Lists.newArrayList();
         channels.add("market.BTC_CW.detail");
@@ -110,17 +88,7 @@ public class WssMarketSubTest {
         });
         Thread.sleep(Integer.MAX_VALUE);
     }
-
-
-    /**
-     * 订阅 Trade Detail 数据
-     * "sub": "market.$symbol.trade.detail"
-     * symbol	合约名称		如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约
-     *
-     * @throws URISyntaxException
-     * @throws InterruptedException
-     */
-    @Test
+    
     public void test4() throws URISyntaxException, InterruptedException {
         List<String> channels = Lists.newArrayList();
         channels.add("market.BTC_CW.trade.detail");
@@ -133,6 +101,36 @@ public class WssMarketSubTest {
         });
         Thread.sleep(Integer.MAX_VALUE);
     }
+    
+	public void run() throws URISyntaxException{
+		
+        List<String> channels = Lists.newArrayList();
+        channels.add("market.BTC_CW.kline.1min");
+//        channels.add("market.BTC_CW.kline.5min");
+//        channels.add("market.BTC_CW.kline.15min");
+//        channels.add("market.BTC_CW.kline.30min");
+//        channels.add("market.BTC_CW.kline.60min");
+//        channels.add("market.BTC_CW.kline.4hour");
+//        channels.add("market.BTC_CW.kline.1day");
+//        channels.add("market.BTC_CW.kline.1week");
+//        channels.add("market.BTC_CW.kline.1mon");
 
-
+        wssMarketHandle.sub(channels, response -> {
+        	logger.info(response);
+        	Kline kline = HuobiSourceDataExtractor.getKLineData(response);
+        	
+//        	long objj = JSONUtil.parseObj(response).getLong("ts");
+//        	logger.info(DateUtil.date(objj).toString());
+//    		logger.info(DateUtil.date(kline.getTs()*1000).toString());
+    		
+    		logger.info(kline.toString());
+        });
+		
+	}
+    
+	public static void main(String []args) throws URISyntaxException{
+		Waterfall mWaterfall = new Waterfall();
+		mWaterfall.run();
+	}
+	
 }
