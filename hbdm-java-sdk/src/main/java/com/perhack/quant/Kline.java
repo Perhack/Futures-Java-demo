@@ -19,6 +19,12 @@ public class Kline {
 	private double count;
 	
 	private double amount;
+	
+	private String contractType;
+	
+	private String channel;
+	
+	private String period;
 
 	public long getTs() {
 		return ts;
@@ -92,10 +98,35 @@ public class Kline {
 		this.amount = amount;
 	}
 
+	public String getContractType() {
+		return contractType;
+	}
+
+	public void setContractType(String contractType) {
+		this.contractType = contractType;
+	}
+
+	public String getChannel() {
+		return channel;
+	}
+
+	public void setChannel(String channel) {
+		this.channel = channel;
+	}
+
+	public String getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(String period) {
+		this.period = period;
+	}
+
 	@Override
 	public String toString() {
-		return "Kline [ts=" + ts + ", open=" + open + ", close=" + close + ", high=" + high + ", low=" + low
-				+ ", vol=" + vol + ", count=" + count + ", amount=" + amount + "]";
+		return "Kline [ts=" + ts + ", respTs=" + respTs + ", open=" + open + ", close=" + close + ", high=" + high
+				+ ", low=" + low + ", vol=" + vol + ", count=" + count + ", amount=" + amount + ", contractType="
+				+ contractType + ", quotesType=" + channel + ", period=" + period + "]";
 	}
 	
 	

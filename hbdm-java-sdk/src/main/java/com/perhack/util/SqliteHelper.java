@@ -98,14 +98,25 @@ public class SqliteHelper {
      * @throws SQLException
      * @throws ClassNotFoundException
      */
-    public int executeUpdate(String sql) throws SQLException, ClassNotFoundException {
-        try {
-            int c = getStatement().executeUpdate(sql);
-            return c;
+    public int executeUpdate(String sql) {
+    	int c = 0;
+    	try {
+            
+			try {
+				c = getStatement().executeUpdate(sql);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            
         } finally {
             destroyed();
+            
         }
-        
+        return c;
     }
 
     /**
@@ -140,8 +151,46 @@ public class SqliteHelper {
         }
     }
     
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        if (null == connection) connection = getConnection(dbFilePath);
+	public synchronized void executeBatch(String sqls){
+		Statement statement = null;
+		int result = 0;
+		Connection conn = getConnection();
+		try {
+			conn.setAutoCommit(false);
+			statement = conn.createStatement();
+			
+			String[] sqlSegs = sqls.split(";");
+			for(String sql : sqlSegs){
+			    if (sql != null){
+			    	statement.addBatch(sql);
+			    }
+			}
+			statement.executeBatch();
+			statement.close();
+			conn.commit();
+			System.out.println("commit");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("执行失败:" + sqls);
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+	}
+	
+    private Connection getConnection(){
+        if (null == connection)
+			try {
+				connection = getConnection(dbFilePath);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         return connection;
     }
     

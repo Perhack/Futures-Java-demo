@@ -1,24 +1,116 @@
-2020-01-03 18:00:46.309 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onError:98] - onError:
-java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
-	at java.lang.Thread.run(Unknown Source)
-2020-01-03 18:00:46.394 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false
-2020-01-07 17:54:08.423 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onError:98] - onError:
-java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.Socket.connect(Socket.java:606)
-	at org.java_websocket.client.WebSocketClient.run(WebSocketClient.java:395)
-	at java.lang.Thread.run(Thread.java:748)
-2020-01-07 17:54:08.438 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:-1,s:Connection timed out: connect,b:false
+2020-01-09 18:01:04.151 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:01:12.097 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:01:12.783 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:01:37.464 [ERROR] [WebSocketConnectReadThread-20] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:01:42.099 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:01:42.828 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:02:20.165 [ERROR] [WebSocketConnectReadThread-23] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:02:22.094 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:02:23.185 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:03:01.871 [ERROR] [WebSocketConnectReadThread-26] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:03:02.093 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:03:02.536 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:03:42.012 [ERROR] [WebSocketConnectReadThread-29] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:03:42.093 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:03:42.951 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:04:02.948 [ERROR] [WebSocketConnectReadThread-32] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:04:03.196 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:04:03.673 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:04:32.363 [ERROR] [WebSocketConnectReadThread-35] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:04:32.545 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:04:33.020 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:04:53.012 [ERROR] [WebSocketConnectReadThread-38] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:04:53.190 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:04:53.640 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:05:25.601 [ERROR] [WebSocketConnectReadThread-41] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:05:32.094 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:05:32.680 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:05:52.658 [ERROR] [WebSocketConnectReadThread-44] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:05:52.810 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:05:53.308 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:06:13.226 [ERROR] [WebSocketConnectReadThread-47] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:06:13.648 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:06:14.903 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:06:40.419 [ERROR] [WebSocketConnectReadThread-50] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:06:42.147 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:06:42.781 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:07:02.756 [ERROR] [WebSocketConnectReadThread-53] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:07:02.784 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:07:03.324 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:07:23.367 [ERROR] [WebSocketConnectReadThread-56] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:07:23.674 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:07:23.674 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:07:24.251 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:07:44.249 [ERROR] [WebSocketConnectReadThread-59] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:07:44.769 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:08:17.199 [ERROR] [WebSocketConnectReadThread-62] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:08:22.092 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:08:22.898 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:08:42.826 [ERROR] [WebSocketConnectReadThread-65] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:08:42.830 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:08:43.422 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:09:03.460 [ERROR] [WebSocketConnectReadThread-68] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:09:03.640 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:09:04.243 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:10:51.277 [ERROR] [WebSocketConnectReadThread-13] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:10:52.680 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:10:53.549 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:11:23.469 [ERROR] [WebSocketConnectReadThread-19] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:11:32.687 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:11:33.167 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:12:07.873 [ERROR] [WebSocketConnectReadThread-23] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:12:12.679 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:12:13.524 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:14:11.868 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:14:24.750 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-09 18:14:26.985 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:14:27.436 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:14:47.416 [ERROR] [WebSocketConnectReadThread-16] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:14:51.300 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-09 18:14:56.986 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:14:57.589 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:15:17.875 [ERROR] [WebSocketConnectReadThread-20] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:15:26.995 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:15:27.433 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:15:54.540 [ERROR] [WebSocketConnectReadThread-23] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:15:56.986 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:15:57.425 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:16:17.425 [ERROR] [WebSocketConnectReadThread-26] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:16:17.591 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:16:18.073 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:16:38.072 [ERROR] [WebSocketConnectReadThread-29] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:16:38.829 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-09 18:16:46.986 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:16:47.420 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:17:07.447 [ERROR] [WebSocketConnectReadThread-32] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:17:07.591 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:17:08.591 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:17:28.578 [ERROR] [WebSocketConnectReadThread-35] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:17:36.985 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:17:37.462 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:17:57.451 [ERROR] [WebSocketConnectReadThread-38] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:17:57.590 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:17:58.023 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:18:21.363 [ERROR] [WebSocketConnectReadThread-41] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:18:26.985 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:18:28.407 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:18:48.489 [ERROR] [WebSocketConnectReadThread-44] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:18:48.587 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:18:48.980 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:19:09.035 [ERROR] [WebSocketConnectReadThread-47] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:19:16.985 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:19:17.528 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:22:08.529 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:22:15.313 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-09 18:22:28.903 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:22:29.374 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:23:00.764 [ERROR] [WebSocketConnectReadThread-16] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:23:08.904 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:23:09.344 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:23:48.216 [ERROR] [WebSocketConnectReadThread-20] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:23:48.903 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:23:49.331 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-09 18:30:09.599 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-09 18:30:11.317 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-09 18:30:11.854 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-09 18:30:12.550 [ERROR] [pool-1-thread-2] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
