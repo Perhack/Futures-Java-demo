@@ -28,17 +28,20 @@ public class TestSelect {
 	
 	public static void main(String []args) {
 		
-		Queue<String> urls = new LinkedBlockingQueue<String>();
+		Queue<String> periods = new LinkedBlockingQueue<String>();
 		Connection connection = getConnection();
 		Statement statement = null;
 		try {
 			statement = connection.createStatement();
 			statement.setQueryTimeout(30); // set timeout to 30 sec.
-			ResultSet rs = statement.executeQuery("select * from meirizaishou");
+			ResultSet rs = statement.executeQuery("select * from trade");
+
 			while (rs.next()) {
-			    String id = rs.getString("id");
-			    urls.add(id);
+			    String period = rs.getString("ts");
+			    periods.add(period);
 		    }
+		    System.out.println(periods.size());
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

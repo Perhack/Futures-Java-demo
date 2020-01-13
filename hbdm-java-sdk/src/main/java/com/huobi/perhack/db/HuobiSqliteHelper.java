@@ -46,13 +46,12 @@ public class HuobiSqliteHelper {
 		
 		sqls += sql + ";";
 		sqlCount ++;
-		if(sqlCount >= 5010) {
+		if(sqlCount >= 1000) {
 			mSqliteHelper.executeBatch(sqls);
 			sqls = "";
 			sqlCount = 0;
 		}
-//			logger.info(sql);
-//			mSqliteHelper.executeUpdate(sql);
+
 
 	}
 	
@@ -63,7 +62,6 @@ public class HuobiSqliteHelper {
 				+ "','" + DateUtil.date(position.getRespTs()).toString() + "','"+ position.getAsks() + "','" + 
 				position.getBids() + "','" + position.getContractType() + "','" + position.getStep() +   "')";
 		sqls += sql + ";";
-//		logger.info(sql);
 		sqlCount ++;
 
 		if(sqlCount >= 5010) {
@@ -71,27 +69,23 @@ public class HuobiSqliteHelper {
 			sqls = "";
 			sqlCount = 0;
 		}
-//		logger.info(sql);
-//		mSqliteHelper.executeUpdate(sql);
 
 	}
 	
 	public void insertIntoTrade(Trade trade) {
 		
 
-		String sql = "insert into trade values('" + DateUtil.date(trade.getTs()*1000).toString()
+		String sql = "insert into trade values('" + DateUtil.date(trade.getTs()).toString()
 				+ "','" + DateUtil.date(trade.getRespTs()).toString()+ "'," + trade.getPrice() + "," + trade.getAmount() 
 				+ ",'" +  trade.getContractType() + "','" + trade.getDirection() +  "')";
 		sqls += sql + ";";
 		sqlCount ++;
 
-		if(sqlCount >= 5010) {
+		if(sqlCount >= 1000) {
 			mSqliteHelper.executeBatch(sqls);
 			sqls = "";
 			sqlCount = 0;
 		}
-//		logger.info(sql);
-//		mSqliteHelper.executeUpdate(sql);
 
 	}
 	

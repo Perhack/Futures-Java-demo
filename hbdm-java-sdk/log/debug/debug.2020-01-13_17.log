@@ -1,0 +1,19 @@
+2020-01-13 17:54:22.361 [DEBUG] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onOpen:57] - onOpen Success
+2020-01-13 17:54:28.561 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":1}
+2020-01-13 17:54:39.681 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":2}
+2020-01-13 17:54:59.770 [ERROR] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onClose:93] - onClose i:1006,s:,b:true
+2020-01-13 17:55:01.908 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":3}
+2020-01-13 17:55:01.909 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-13 17:55:11.150 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":4}
+2020-01-13 17:55:11.151 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-13 17:55:18.489 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":5}
+2020-01-13 17:55:18.490 [ERROR] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:128] - dealPing出现了异常
+2020-01-13 17:55:22.495 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:141] - isClosed:true,isClosing:false，准备重连
+2020-01-13 17:55:22.940 [DEBUG] [WebSocketConnectReadThread-19] [com.huobi.wss.handle.WssMarketHandle.onOpen:57] - onOpen Success
+2020-01-13 17:55:22.946 [ERROR] [pool-1-thread-1] [com.huobi.wss.handle.WssMarketHandle.run:143] - 重连的结果为：true
+2020-01-13 17:55:32.024 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":6}
+2020-01-13 17:55:49.876 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":7}
+2020-01-13 17:56:03.778 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":8}
+2020-01-13 17:56:18.355 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":9}
+2020-01-13 17:59:48.692 [DEBUG] [WebSocketConnectReadThread-10] [com.huobi.wss.handle.WssMarketHandle.onOpen:57] - onOpen Success
+2020-01-13 17:59:56.221 [DEBUG] [pool-2-thread-1] [com.huobi.wss.handle.WssMarketHandle.dealPing:125] - 发送pong:{"pong":1}
