@@ -88,48 +88,52 @@ public class Waterfall {
         channels.add("market.BTC_CQ.kline.1week");
         channels.add("market.BTC_CQ.kline.1mon");
         
-//        channels.add("market.BTC_CW.depth.step0");
-//        channels.add("market.BTC_CW.depth.step1");
-//        channels.add("market.BTC_CW.depth.step2");
-//        channels.add("market.BTC_CW.depth.step3");
-//        channels.add("market.BTC_CW.depth.step4");
-//        channels.add("market.BTC_CW.depth.step5");
-//        channels.add("market.BTC_CW.depth.step6");
-//        channels.add("market.BTC_CW.depth.step7");
-//        channels.add("market.BTC_CW.depth.step8");
-//        channels.add("market.BTC_CW.depth.step9");
-//        channels.add("market.BTC_CW.depth.step10");
-//        channels.add("market.BTC_CW.depth.step11");
-//
-//        channels.add("market.BTC_NW.depth.step0");
-//        channels.add("market.BTC_NW.depth.step1");
-//        channels.add("market.BTC_NW.depth.step2");
-//        channels.add("market.BTC_NW.depth.step3");
-//        channels.add("market.BTC_NW.depth.step4");
-//        channels.add("market.BTC_NW.depth.step5");
-//        channels.add("market.BTC_NW.depth.step6");
-//        channels.add("market.BTC_NW.depth.step7");
-//        channels.add("market.BTC_NW.depth.step8");
-//        channels.add("market.BTC_NW.depth.step9");
-//        channels.add("market.BTC_NW.depth.step10");
-//        channels.add("market.BTC_NW.depth.step11");
-//        
-//        channels.add("market.BTC_CQ.depth.step0");
-//        channels.add("market.BTC_CQ.depth.step1");
-//        channels.add("market.BTC_CQ.depth.step2");
-//        channels.add("market.BTC_CQ.depth.step3");
-//        channels.add("market.BTC_CQ.depth.step4");
-//        channels.add("market.BTC_CQ.depth.step5");
-//        channels.add("market.BTC_CQ.depth.step6");
-//        channels.add("market.BTC_CQ.depth.step7");
-//        channels.add("market.BTC_CQ.depth.step8");
-//        channels.add("market.BTC_CQ.depth.step9");
-//        channels.add("market.BTC_CQ.depth.step10");
-//        channels.add("market.BTC_CQ.depth.step11");
+        channels.add("market.BTC_CW.depth.step0");
+        channels.add("market.BTC_CW.depth.step1");
+        channels.add("market.BTC_CW.depth.step2");
+        channels.add("market.BTC_CW.depth.step3");
+        channels.add("market.BTC_CW.depth.step4");
+        channels.add("market.BTC_CW.depth.step5");
+        channels.add("market.BTC_CW.depth.step6");
+        channels.add("market.BTC_CW.depth.step7");
+        channels.add("market.BTC_CW.depth.step8");
+        channels.add("market.BTC_CW.depth.step9");
+        channels.add("market.BTC_CW.depth.step10");
+        channels.add("market.BTC_CW.depth.step11");
+
+        channels.add("market.BTC_NW.depth.step0");
+        channels.add("market.BTC_NW.depth.step1");
+        channels.add("market.BTC_NW.depth.step2");
+        channels.add("market.BTC_NW.depth.step3");
+        channels.add("market.BTC_NW.depth.step4");
+        channels.add("market.BTC_NW.depth.step5");
+        channels.add("market.BTC_NW.depth.step6");
+        channels.add("market.BTC_NW.depth.step7");
+        channels.add("market.BTC_NW.depth.step8");
+        channels.add("market.BTC_NW.depth.step9");
+        channels.add("market.BTC_NW.depth.step10");
+        channels.add("market.BTC_NW.depth.step11");
+        
+        channels.add("market.BTC_CQ.depth.step0");
+        channels.add("market.BTC_CQ.depth.step1");
+        channels.add("market.BTC_CQ.depth.step2");
+        channels.add("market.BTC_CQ.depth.step3");
+        channels.add("market.BTC_CQ.depth.step4");
+        channels.add("market.BTC_CQ.depth.step5");
+        channels.add("market.BTC_CQ.depth.step6");
+        channels.add("market.BTC_CQ.depth.step7");
+        channels.add("market.BTC_CQ.depth.step8");
+        channels.add("market.BTC_CQ.depth.step9");
+        channels.add("market.BTC_CQ.depth.step10");
+        channels.add("market.BTC_CQ.depth.step11");
         
         channels.add("market.BTC_CW.trade.detail");
         channels.add("market.BTC_NW.trade.detail");
         channels.add("market.BTC_CQ.trade.detail");
+
+        channels.add("market.BTC_CW.detail");
+        channels.add("market.BTC_NW.detail");
+        channels.add("market.BTC_CQ.detail");
 
         wssMarketHandle.sub(channels, response -> {
 //        	logger.info(response);

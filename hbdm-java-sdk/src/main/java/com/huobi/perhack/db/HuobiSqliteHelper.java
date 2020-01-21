@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.perhack.quant.Detail;
 import com.perhack.quant.Kline;
 import com.perhack.quant.Position;
 import com.perhack.quant.Trade;
@@ -46,7 +47,7 @@ public class HuobiSqliteHelper {
 		
 		sqls += sql + ";";
 		sqlCount ++;
-		if(sqlCount >= 1000) {
+		if(sqlCount >= 5000) {
 			mSqliteHelper.executeBatch(sqls);
 			sqls = "";
 			sqlCount = 0;
@@ -63,7 +64,6 @@ public class HuobiSqliteHelper {
 				position.getBids() + "','" + position.getContractType() + "','" + position.getStep() +   "')";
 		sqls += sql + ";";
 		sqlCount ++;
-
 		if(sqlCount >= 5010) {
 			mSqliteHelper.executeBatch(sqls);
 			sqls = "";
@@ -80,12 +80,33 @@ public class HuobiSqliteHelper {
 				+ ",'" +  trade.getContractType() + "','" + trade.getDirection() +  "')";
 		sqls += sql + ";";
 		sqlCount ++;
+//		System.out.println(trade.getTs() + "\t" + trade.getRespTs());
 
-		if(sqlCount >= 1000) {
+		if(sqlCount >= 5000) {
 			mSqliteHelper.executeBatch(sqls);
 			sqls = "";
 			sqlCount = 0;
 		}
+
+	}
+	
+	public void insertIntoDetail(Detail detail) {
+		
+
+		String sql = "insert into detail values('" + DateUtil.date(detail.getTs()*1000).toString() 
+				+ "','" + DateUtil.date(detail.getRespTs()).toString() + "',"
+				+ detail.getOpen() + "," + detail.getHigh() + "," + detail.getLow() + "," + detail.getClose() + ","
+				+ detail.getAmount() + "," + detail.getVol() + "," + detail.getCount() + ",'" + detail.getContractType()
+				+ "')";
+		
+		sqls += sql + ";";
+		sqlCount ++;
+		if(sqlCount >= 5000) {
+			mSqliteHelper.executeBatch(sqls);
+			sqls = "";
+			sqlCount = 0;
+		}
+
 
 	}
 	

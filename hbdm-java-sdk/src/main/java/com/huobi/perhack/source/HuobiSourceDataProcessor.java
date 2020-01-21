@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.huobi.perhack.db.HuobiSqliteHelper;
+import com.perhack.quant.Detail;
 import com.perhack.quant.Kline;
 import com.perhack.quant.Position;
 import com.perhack.quant.Trade;
@@ -77,10 +78,26 @@ public class HuobiSourceDataProcessor {
 				trade.setAmount(jsonObject.getLong("amount"));
 				trade.setPrice(jsonObject.getDouble("price"));
 				trade.setDirection(jsonObject.getStr("direction"));
+				trade.setTs(jsonObject.getLong("ts"));
 				mHuobiSqliteHelper.insertIntoTrade(trade);
 			}
 			break;
+		case "detail":
+			Detail detail = new Detail();
+			detail.setTs(tick.getLong("id"));	//ID，实际对应当前时间的分钟
+			detail.setRespTs(respTs);			//响应生成时间，目前看和K线时间一致
+			detail.setOpen(tick.getDouble("open"));
+			detail.setClose(tick.getDouble("close"));
+			detail.setHigh(tick.getDouble("high"));
+			detail.setLow(tick.getDouble("low"));
+			detail.setAmount(tick.getDouble("amount"));	//成交量(币), 即 sum(每一笔成交量(张)*单张合约面值/该笔成交价)
+			detail.setVol(tick.getDouble("vol"));	//成交量张数
+			detail.setCount(tick.getDouble("count"));	//成交笔数
+			detail.setContractType(contractType);
+			detail.setChannel(channel);
+			mHuobiSqliteHelper.insertIntoDetail(detail);
 			
+			break;
 		default:
 			break;
 		}
